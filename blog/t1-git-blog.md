@@ -1,13 +1,18 @@
-Title
+Why It's Time To Git GitHub
 
-Subtitle
+If you never want all your hours of work to go to waste because some lame-o accidentally messed with your file, then maybe it's time you met GitHub. Reader, GitHub. GitHub, meet Reader.
 
-Date
+October 28, 2014
 
-Paragraph 1
+Honestly, I didn't really understand what GitHub did before this week. Nor can I claim that I fully understand what it does now. However, since I know more than I knew previously, I may have some info fellow GitHub newbs might find useful.
 
-Paragraph 2
+What is GitHub?
 
-Paragraph 3
+Hold on, is GitHub the same thing as git?
 
-Add as many paragraphs as you want!!!
+Why you should consider using GitHub
+1.
+
+What are the benefits of version control?
+How does git help you keep track of changes?
+Why use GitHub to store your code?
