@@ -1,6 +1,6 @@
 It's Dev-initely A Bootcamp
 
-Husting toward a goal
+Hustling toward a goal
 
 October 29, 2014
 
