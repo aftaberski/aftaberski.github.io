@@ -42,31 +42,11 @@
 
 #main {
   background-color: white;
-  height: 500px;
-  padding-bottom: 100px;
   display: block;
 }
 
-#main img {
-  position: absolute;
-  display: inline-block;
-  top: 280px;
-  left: 200px;
-}
-
-#about-me {
-  position: absolute;
-  display: inline-block;
-  top: 280px;
-  left: 600px;
-  width: 300px;
+#main ul li {
   font-family: 'Roboto Slab', serif;
-  color: #221559;
-}
-
-#about-me span {
-  font-family: 'Oleo Script', cursive;
-  font-size: 30px;
 }
 
 #footer {
