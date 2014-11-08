@@ -1,0 +1,23 @@
+h1 {
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  font-size: 50px;
+  height: 100px;
+  width: 100%;
+  background-color: #20ffc4;
+}
+
+#nav {
+  background-color: #11e873;
+  height: 75px;
+  width: 100%;
+  display: block;
+}
+
+li {
+  display: inline-block;
+  padding-left: 180px;
+  padding-top: 25px;
+  font-family: 'Roboto Slab', serif;
+  color: white;
+}
