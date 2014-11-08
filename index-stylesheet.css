@@ -15,21 +15,22 @@ h1 {
   background-color: #96E89C;
   height: 75px;
   width: 100%;
-  display: block;
+  display: inline-block;
 }
 
 #nav ul li {
   display: inline-block;
   padding-left: 180px;
-  padding-top: 25px;
+  padding-top: 20px;
   font-family: 'Roboto Slab', serif;
-  color: white;
+  color: #221559;
 }
 
 #main {
   background-color: #white;
-  height: 600px;
+  height: 200px;
   padding-bottom: 100px;
+  display: block;
 }
 
 #main img {
@@ -48,7 +49,7 @@ h1 {
 }
 
 #footer {
-  position: absolute;
+  position: relative;
   bottom: -300px;
   height: 100px;
   width: 100%;
@@ -59,5 +60,9 @@ h1 {
 #footer ul li {
   display:inline-block;
   padding-left: 100px;
+  bottom: ;
+}
 
+#twitter {
+  padding-bottom: 10px;
 }
