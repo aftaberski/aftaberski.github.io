@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anna Taberski</title>
+    <link rel="stylesheet" type="text/css" href="t2-css-design-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <div id="header">
+    <h1><a href="http://aftaberski.github.io/">Anna Taberski</a></h1>
+  </div>
+  <div id="nav">
+    <ul>
+      <li><a href="http://aftaberski.github.io/">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="http://aftaberski.github.io/blog/">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <!--INSERT NEWEST BLOG LINK HERE-->
+    <h1>What's Your Position On That?</h1>
+    <p>NOVEMBER 9, 2014</p>
+
+    <p>This week I ran into a bit of a problem. When I was working on the Bershire Hathaway CSS challenge, it felt like I had NO control over my blocks. They were just moving all over the page doing whatever they felt like doing. But hey! I'm the boss! I won't let some silly blocks run my site! So I did a little research about blocks and how to master them.</p>
+
+    <p class="emphasis">Absolute</p>
+    <p>According to <a href="http://www.w3schools.com/cssref/pr_class_position.asp">w3schools</a>, The element is positioned relative to its first positioned (non-static) ancestor element. I find it most helpful to see the difference using images, so let's check it out</p>
+
+    <p>This is an image of just two blocks. Just a &lt;div&gt;&lt;/div&gt; and an &lt;img/&gt;</p>
+
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/1-Just%202%20blocks.png?token=AIPAi-LsUzNSJiU05aZ5B12uY822pbMnks5UaKMlwA%3D%3D"/>
+
+    <p>Now we set the kitten image to "position:absolute" with "bottom:0; right:0"</p>
+
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/2%20-%20Absolute%20kitten.png?token=AIPAi5YCf-y2SMADFK6rinv6XSEVqEP9ks5UaKVAwA%3D%3D"/>
+
+    <p>Pretty cool, but now it's at the corner of the browser. What if we want it inside of the &lt;div&gt; block? Well first we edit our html so it says &lt;div&rt;&lt;img/&rt;&lt;/div&rt;</p>
+
+    <p>Here's where I started to feel like I was mastering the blocks a little. I watched <a href="https://www.youtube.com/watch?v=aFtByxWjfLY&index=9&list=PLpcSpRrAaOaqfJ5uIRikm04Gd5X5aiqSB">this YouTube video</a> and learned a little trick</p>
+    <p><span class="emphasis">Tip for Absolute Positioning!:</span> If you make the container element (in this case &lt;div&rt;), "position:relative/" and keep the kitten as "position:absolute; bottom:0; right:0", the kitten image will align with the bottom right corner of the &lt;div&rt; like this:</p>
+
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/3-kitten%20absolute%20in%20relative%20container.png?token=AIPAixQcMDdq3sL-EPDL7t65lizNDJQIks5UaLATwA%3D%3D"/>
+
+    <p class="emphasis">Relative</p>
+    <p>Relative positioning means the element is positioned relative to it's current position</p>
+
+    <p>For example, here the kitten image is set as "position:relative"</p>
+
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/4-Set%20kitten%20to%20relative.png?token=AIPAi0wTMWyedHNigUDCaCcQxDCLajBCks5UaLCCwA%3D%3D"/>
+
+    <p>Now the it's relative we have the power to push and pull it from the top, bottom, left and right! Here is the kitten with "top:100px"</p>
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/5-Relative%20100%20down.png?token=AIPAi7p6i34MgTVFwee0ZgXfWdCB1k-uks5UaLFYwA%3D%3D"/>
+
+    <p class="emphasis">Fixed</p>
+    <p>Fixed positioning positions the elemet in relation to the browser window.</p>
+    <p>Here is the kitten as "position:fixed; top:0; right:0;</p>
+
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/6-kitten%20fixed.png?token=AIPAi0cpmKMmy0hcCKoDNDh_GbS6TdDWks5UaLHRwA%3D%3D"/>
+
+    <p>It's good to note that the positioning remains in relation to the browser window even when you shrink it like this:</p>
+
+    <img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/7-fixed%20when%20shrink%20browser.png?token=AIPAixh10CinTqKytmRGLKlZBgYCV46iks5UaLJiwA%3D%3D"/>
+
+    <p>This is definitely not ideal for a lot of situations. However, what if you want your header to be visible even when the user scrolls down? FIXED POSITIONING! It definitely has it's uses.
+  </div>
+  <div id="footer">
+    <ul>
+      <li id="twitter"><a href="https://twitter.com/AnnaTaberski"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/twitter%20logo.png?token=AIPAi8XTMNDQOOaUIXiz4wCle7rcrOhiks5UZ3Y3wA%3D%3D"/></a></li>
+      <li><a href="https://www.linkedin.com/in/annataberski/"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/linkedin%20logo.png?token=AIPAixkAa1e0b4Gk-_OHnTasRNsqd7UAks5UZ3ZlwA%3D%3D"/></a></li>
+      <li><a href="https://www.facebook.com/aftaberski"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/facebook%20logo.png?token=AIPAi8d_HRJseg-5vOpkgXNCBaH-PLmfks5UZ3aBwA%3D%3D"/></a></li>
+      <li><a href="mailto:aftaberski@gmail.com"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/gmail%20logo.png?token=AIPAi6ihHus_FUGUY0rviB1f3QYqZ9ftks5UZ3adwA%3D%3D"/></a></li>
+    </ul>
+  </div>
+</html>
