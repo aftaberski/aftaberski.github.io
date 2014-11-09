@@ -57,9 +57,9 @@
   left: 100px;
 }
 
-span {
+.emphasis {
   font-family: 'Oleo Script', cursive;
-  font-size: 13px;
+  font-size: 17px;
   color: #221559;
   left: 100px;
 }
@@ -69,7 +69,6 @@ li {
   font-size: 13px;
   color: #221559;
   position: relative;
-  left: 100px;
 }
 
 #footer {
