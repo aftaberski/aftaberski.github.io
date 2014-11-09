@@ -82,7 +82,7 @@ h1 a:visited {
   height: 100px;
   width: 100%;
   background-color: #4CA090;
-
+  overflow:hidden;
 }
 
 #footer ul li {
