@@ -12,8 +12,16 @@
   color: #221559;
 }
 
-#header h1 a{
+#header h1 a {
   text-decoration: none;
+}
+
+#header h1 a:link {
+  color: #221559;
+}
+
+#header h1 a:visited {
+  color: #221559
 }
 
 #nav a:link {
