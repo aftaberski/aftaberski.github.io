@@ -43,12 +43,14 @@
 #main {
   background-color: white;
   display: block;
-  height: 350px;
+  width: 600px;
+  height: auto;
+  padding-bottom: 20px;
 }
 
 #main h1 {
-  font-family: 'Roboto Slab', serif;
-  font-size: 20px;
+  font-family: 'Oleo Script', cursive;
+  font-size: 25px;
   color: #221559;
   position: relative;
   left: 100px;
