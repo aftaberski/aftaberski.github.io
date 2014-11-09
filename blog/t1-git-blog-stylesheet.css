@@ -16,6 +16,14 @@
   text-decoration: none;
 }
 
+#nav a:link {
+  color: #221559;
+}
+
+#nav a:hover {
+  color: white;
+}
+
 #nav {
   background-color: #8EE7E0;
   height: 60px;
