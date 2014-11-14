@@ -82,7 +82,7 @@
 }
 
 #main img {
-  width: 300px;
+  width: 400px;
   border: 1px solid black;
 }
 
@@ -118,6 +118,11 @@ li {
 #footer ul li {
   display:inline-block;
   padding-left: 100px;
+}
+
+#footer img {
+  position: relative;
+  bottom: 20px;
 }
 
 #twitter {

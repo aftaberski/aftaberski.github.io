@@ -90,6 +90,11 @@ h1 a:visited {
   padding-left: 100px;
 }
 
+#footer img {
+  position: relative;
+  bottom: 20px;
+}
+
 #twitter {
   position: relative;
   bottom: 20px;
