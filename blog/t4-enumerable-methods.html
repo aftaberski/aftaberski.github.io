@@ -22,7 +22,7 @@
     <h1>How To Make Groups</h1>
     <p>NOVEMBER 21, 2014</p>
     <p><em>Using the <span class="code">group_by</span> method</em></p>
-    <p>Who really likes sorting? I definitely don't. I still have my clean laundry in a bag right now because I don't feel like sorting each item of clothing into it's proper drawer. Sometimes we want information to be sorted for us. Luckily for me, I don't have to sort items in Ruby. I can just make the code to it for me. (If only all of life were that easy, I might have more easily accessible clean clothes). Here's a look at the enumerable method <span class="code">group_by</span></p>
+    <p>Who really likes sorting? I definitely don't. I still have my clean laundry in a bag right now because I don't feel like sorting each item of clothing into it's proper drawer. Sometimes we want information to be sorted for us. Luckily for me, I don't have to sort items in Ruby. I can just make the code do it for me. (If only all of life were that easy, I might have more easily accessible clean clothes). Here's a look at the enumerable method <span class="code">group_by</span></p>
 
     <p>Sidenote: This blog is going to be Pitch Perfect themed because I am personally excited about the PP2 trailer that just came out. (PP2 = "Pitch Perfect 2"). Is everyone excited with me? No? Mkay that's fine, just continue reading while simultaneously being ashamed of yourself a little bit.</p>
 
@@ -30,24 +30,24 @@
 
     <h1 class="emphasis">The Basics</h1>
     <p></p>
-    <p>For starters, <span class="code">group_by</span> groups an array or hash based on certain criteria. I found the following info on the <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/">Global Nerdy</a> blog and thought it explained it really well</p>
-    <p>Expects: A block containing criteria explaining how the collection should be grouped</p>
-    <p>Returns: A hash in which each key represents an output of the criteria. The corresponding value is an array containing the members of that group
+    <p>For starters, <span class="code">group_by</span> groups an array or hash based on certain criteria. I found the following info on the <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/">Global Nerdy</a> blog and thought it explained the basics really well</p>
+    <p>The Method Expects: A block containing criteria explaining how the collection should be grouped</p>
+    <p>The Method Returns: A hash in which each key represents an output of the criteria. The corresponding value is an array containing the members of that group</p>
 
     <h1 class="emphasis">Grouping Arrays</h1>
-    <p>When <span class="code">group_by</span> is used on an array, it iterates through the array and passes each item through the blog. The result value of the block determines which item is placed into each group. For example, Ruby docs uses the following to illustrate this process:</p>
+    <p>When <span class="code">group_by</span> is used on an array, it iterates through the array and passes each item through the block. The resulting value of the block determines which item is placed into each group. For example, Ruby docs uses the following to illustrate this process:</p>
     <p><div class="code">array = [0..15]group_by {|num| num % 3}
       <br># => 0 => [0, 3, 6, 9, 12, 15]
       <br>1 => [1, 4, 7, , 10, 13]
       <br>2 => [2, 5, 8, 11, 14]</br></div></p>
-      <p>As you can see, the groups are organized based on the remainder you get when you divide the number by 3.</p>
+      <p>As you can see, the groups are organized based on the remainder you get when you divide each number by 3.</p>
     <p>We can also use different criteria to make our groups. For example, we can take an array and group the items by string length, like this:
     <p><div class="code">bellas = ["Beca", "Aubrey", "Chloe", "Fat Amy", "Cynthia-Rose", "Lilly"]
       <br>bellas.group_by { |singer| singer.length}
       <br># => {4=>["Beca"], 6=>["Aubrey"], 5=>["Chloe", "Lilly"], 7=>["Fat Amy"], 12=>["Cynthia-Rose"]}</br></div></p>
 
     <h1 class="emphasis">Grouping Hashes</h1>
-    <p>When <span class="code">group_by</span> is used on a hash, it passes each key-value pair through the block. You can decide whether you'd like your groups to be focused on the keys or values. For example:</p>
+    <p>When <span class="code">group_by</span> is used on a hash, it passes each key-value pair through the block. You can decide whether you'd like your groups to be based on the keys or values. For example:</p>
     <p><div class="code">bellas = {"Beca"=>"alto", "Fat Amy"=>"alto", "Chloe"=>"soprano", "Lilly"=>"alto"}
       <br>bellas.group_by { |name, vocal_range| vocal_range}
       <br>#=> {"alto"=>[["Beca", "alto"], ["Fat Amy", "alto"], ["Lilly", "alto"]], "soprano"=>[["Chloe", "soprano"]]}</br></div></p>
