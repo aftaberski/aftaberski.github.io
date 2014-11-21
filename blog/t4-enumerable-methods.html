@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anna Taberski</title>
+    <link rel="stylesheet" type="text/css" href="t4-enumerable-methods-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <div id="header">
+    <h1><a href="http://aftaberski.github.io/">Anna Taberski</a></h1>
+  </div>
+  <div id="nav">
+    <ul>
+      <li><a href="http://aftaberski.github.io/">About Me</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="http://aftaberski.github.io/blog/">Blog</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </div>
+  <div id="main">
+    <!--INSERT NEWEST BLOG LINK HERE-->
+    <h1>How To Get Into A Group</h1>
+    <p>NOVEMBER 21, 2014</p>
+    <p><em>Using the <span class="code">group_by</span> method</em></p>
+    <p>Who really likes sorting? I definitely don't. I still have my clean laundry in a bag right now because I don't feel like sorting each item of clothing into it's proper drawer. Sometimes we want information to be sorted for us. Luckily for me, I don't have to sort items in Ruby. I can just make the code to it for me. (If only all of life were that easy, I might have more easily accessible clean clothes). Here's a look at the method <span class="code">group_by</span></p>
+
+    <p>Sidenote: This blog is going to be Pitch Perfect themed because I am personally excited about the PP2 trailer that just came out. (PP2 = "Pitch Perfect 2"). Is everyone excited with me? No? Mkay that's fine, just continue reading while simultaneously being ashamed of yourself a little bit.</p>
+
+    <img src="http://www.hollywoodreporter.com/sites/default/files/imagecache/modal_800/2012/09/pitch_perfect_anna_kendrick_a_l.jpg"/>
+
+    <h1 class="emphasis">The Basics</h1>
+    <p></p>
+    <p>For starters, <span class="code">group_by</span> groups an array or hash based on certain criteria. I found the following info on the <a href="http://www.globalnerdy.com/2008/08/31/enumerating-enumerable-enumerablegroup_by/">Global Nerdy</a> blog and thought it explained it really well</p>
+    <p>Expects: A block containing criteria explaining how the collection should be grouped</p>
+    <p>Returns: A hash in which each key represents an output of the criteria. The corresponding value is an array containing the members of that group
+
+    <h1 class="emphasis">Grouping Arrays</h1>
+    <p>When <span class="code">group_by</span> is used on an array, it iterates through the array and passes each item through the blog. The result value of the block determines which item is placed into each group. For example, Ruby docs uses the following to illustrate this process:</p>
+    <p><div class="code">array = [0..15]group_by {|num| num % 3}
+      <br># => 0 => [0, 3, 6, 9, 12, 15]
+      <br>1 => [1, 4, 7, , 10, 13]
+      <br>2 => [2, 5, 8, 11, 14]</br></div></p>
+      <p>As you can see, the groups are organized based on the remainder you get when you divide the number by 3.</p>
+    <p>We can also use different criteria to make our groups. For example, we can take an array and group the items by string length, like this:
+    <p><div class="code">bellas = ["Beca", "Aubrey", "Chloe", "Fat Amy", "Cynthia-Rose", "Lilly"]
+      <br>bellas.group_by { |singer| singer.length}
+      <br># => {4=>["Beca"], 6=>["Aubrey"], 5=>["Chloe", "Lilly"], 7=>["Fat Amy"], 12=>["Cynthia-Rose"]}</br></div></p>
+
+    <h1 class="emphasis">Grouping Hashes</h1>
+    <p>When <span class="code">group_by</span> is used on a hash, it passes each key-value pair through the block. You can decide whether you'd like your groups to be focused on the keys or values. For example:</p>
+    <p><div class="code">bellas = {"Beca"=>"alto", "Fat Amy"=>"alto", "Chloe"=>"soprano", "Lilly"=>"alto"}
+      <br>bellas.group_by { |name, vocal_range| vocal_range}
+      <br>#=> {"alto"=>[["Beca", "alto"], ["Fat Amy", "alto"], ["Lilly", "alto"]], "soprano"=>[["Chloe", "soprano"]]}</br></div></p>
+      <p>And now we know a few things about the <span class="code">group_by</span> method. Congrats to us all! Now now we can celebrate with this great vid. (Full disclosure: you're about to get pitch slapped!)</p>
+      <p></p>
+      <iframe width="560" height="315" src="//www.youtube.com/embed/q573_hDhTbE" frameborder="0" allowfullscreen></iframe>
+  </div>
+  <div id="footer">
+    <ul>
+      <li id="twitter"><a href="https://twitter.com/AnnaTaberski"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/twitter%20logo.png?token=AIPAiyoUoyM17oojdmKSznNlH33GSepJks5UcLffwA%3D%3D"/></a></li>
+      <li><a href="https://www.linkedin.com/in/annataberski/"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/linkedin%20logo.png?token=AIPAi0VLE_xXiVEdhD98S9k-YpEF6M0cks5UcLeNwA%3D%3D"/></a></li>
+      <li><a href="https://www.facebook.com/aftaberski"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/facebook%20logo.png?token=AIPAizDLK3qqaf4XzZLAvN699JtrGq54ks5UcLf_wA%3D%3D"/></a></li>
+      <li><a href="mailto:aftaberski@gmail.com"><img src="https://raw.githubusercontent.com/aftaberski/phase-0-unit-1/master/week-2/imgs/gmail%20logo.png?token=AIPAi2O-OdHpnSn-RHprmtvAxGQlkMmsks5UcLgSwA%3D%3D"/></a></li>
+    </ul>
+  </div>
+</html>
