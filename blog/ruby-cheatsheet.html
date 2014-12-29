@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ruby Cheatsheet</title>
+    <link rel="stylesheet" type="text/css" href="ruby-cheatsheet-stylesheet.css">
+    <link href='http://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <h1>Arrays</h1>
+    <table>
+      <tr>
+        <th>Method Name</th>
+        <th>Structure</th>
+        <th>Example</th>
+      </tr>
+
+      <tr>
+        <td>.slice</td>
+        <td><p>slice(index) => obj or nil</p>
+          <p>slice(start, length) => new_ary or nil</p>
+          <p>slice(range) => new_ary or nil</p></td>
+        <td><p>a = [ "a", "b", "c", "d", "e" ]</p>
+            <p>Index</p>
+            <p>a[2] +  a[0] + a[1]    #=> "cab"</p>
+            <p>Start, length</p>
+            <p>a[0, 2]                #=> [ "a", b", "c" ]</p>
+            <p>Range</p>
+            <p>a[1..3]                #=> [ "b", "c", "d" ]</p>
+        </td>
+      </tr>
+      <tr>
+        <td>.group_by</td>
+        <td><p>group_by { |obj| block } => a_hash</p></td>
+        <td><p>Number Example</p>
+            <p>array = [0..15]group_by {|num| num % 3}</p>
+            <p># => 0 => [0, 3, 6, 9, 12, 15]</p>
+            <p>1 => [1, 4, 7, , 10, 13]</p>
+            <p>2 => [2, 5, 8, 11, 14]</p>
+            <p>String Example</p>
+            <p>bellas = ["Beca", "Aubrey", "Chloe", "Fat Amy", "Cynthia-Rose", "Lilly"]</p>
+            <p>bellas.group_by { |singer| singer.length} </p>
+            <p># => {4=>["Beca"], 6=>["Aubrey"], 5=>["Chloe", "Lilly"], 7=>["Fat Amy"], 12=>["Cynthia-Rose"]}</p>
+        </td>
+      </tr>
+      <tr>
+        <td>.each</td>
+        <td><p>array.each do |arg|</p>
+            <p># Do something to each element, referenced as arg</p>
+            <p>end</p>
+
+            <p>#or</p>
+
+            <p>array.each { |arg|</p>
+              <p># Do something to each element, referenced as arg</p>
+            <p>}</p>
+        </td>
+        <td><p>["Ryan", "Zach"].each do |person|</p>
+            <p>"#{person} is such a great guy!"</p>
+            <p>end</p>
+
+            <p>Ryan is such a great guy!</p>
+            <p>Zach is such a great guy!</p></td>
+      </tr>
+    </table>
+  </body>
+  <div id="main">
+
+  </div>
+</html>
