@@ -2,6 +2,8 @@
   height: 100px;
   width: 100%;
   background: url(../imgs/teal-dish-towel.jpg);
+  margin: 0;
+  padding:0;
 }
 
 #header h1 {
@@ -9,7 +11,7 @@
   font-family: 'Oleo Script', cursive;
   font-size: 50px;
   padding-top: 20px;
-  color: #221559;
+  color: white;
 }
 
 #header h1 a {
