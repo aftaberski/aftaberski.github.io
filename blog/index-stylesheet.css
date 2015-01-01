@@ -100,6 +100,14 @@ a {
   padding-top: 10px;
 }
 
+#main h1 a {
+  color: #555;
+}
+
+#main h1 a:hover {
+  color: #d3d3d3;
+}
+
 #main p {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 13px;
