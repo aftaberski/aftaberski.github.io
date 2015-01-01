@@ -61,9 +61,9 @@ body {
   height: 100px;
   width: 100%;
   text-align: center;
-/*  background: url(../imgs/teal-dish-towel.jpg);
-*/  background-color: blue;
-  background-size: cover;
+  background: url(../imgs/teal-dish-towel.jpg);
+/*  background-color: blue;
+*/  background-size: cover;
   background-position: 50% 50%;
   padding-top: 120px;
   padding-bottom: 15px;
