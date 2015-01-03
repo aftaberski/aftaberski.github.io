@@ -90,47 +90,42 @@
       var puddle = {
         name: "puddle",
       };
-
       var lighter = {
         name: "lighter",
       };
-
       var menorah = {
         name: "menorah",
       }
-
       var xAxis = 0;
       var yAxis = 0;
 
       function move(e) {
         if(e.keyCode === 39){
-          if(xAxis < 300){
-            xAxis += 100;
-            if (mikey.dampness > 0){
+          if (mikey.dampness > 0){
               mikey.dampness --;
             }
+          if(xAxis < 300){
+            xAxis += 100;
             mikeyImage.style.left = xAxis + "px";
           }
         }
         if(e.keyCode === 37){
-            xAxis -= 100;
             if (mikey.dampness > 0){
               mikey.dampness --;
             }
+            if(xAxis > 0){
+              xAxis -= 100;
             mikeyImage.style.left = xAxis + "px";
-            if(xAxis <= 0){
-              xAxis += 100;
-            }
+          }
         }
         if(e.keyCode === 38){
-            yAxis -= 100;
             if (mikey.dampness > 0){
               mikey.dampness --;
             }
+            if(yAxis > 0){
+              yAxis -= 100;
             mikeyImage.style.top = yAxis + "px";
-            if(yAxis <= 0){
-              yAxis += 100;
-            }
+          }
         }
       if(e.keyCode === 40){
           if (mikey.dampness > 0){
@@ -141,14 +136,11 @@
             mikeyImage.style.top = yAxis + "px";
             }
         }
-
         fallInPuddle();
         pickUpLighter();
         lightTheMenorah();
-
       }
       document.onkeydown = move;
-
       function pickUpLighter() {
         if (("100px" === mikeyImage.style.top) && ("300px" === mikeyImage.style.left)) {
           mikey.lighter = true;
@@ -156,14 +148,12 @@
           alert("You have the flame! Now go find the menorah!");
         }
       };
-
       function fallInPuddle() {
         if (("300px" === mikeyImage.style.top) && ("100px" === mikeyImage.style.left)){
           mikey.dampness = mikey.dampness+10;
           alert("Uh oh! Mikey fell in the puddle! You must move 10 times before you can light the menorah");
         }
       };
-
       function lightTheMenorah() {
         if (("300px" === mikeyImage.style.top) && ("300px" === mikeyImage.style.left) && (mikey.dampness < 1) && (mikey.lighter === true)) {
           alert("CONGRATULATIONS! You helped Mikey light the menorah! You win!");
@@ -175,8 +165,6 @@
           alert("You must get the flame in order to light the menorah!")
         }
       };
-
-
       </script>
     </body>
 </html>
