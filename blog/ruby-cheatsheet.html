@@ -6,12 +6,15 @@
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro|Crete+Round|Rokkitt' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:100,300,400' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <h1>Arrays</h1>
+    <h1 class="title">Ruby Cheatsheet</h1>
+    <h3 class="subheader">Arrays</h3>
     <table>
-      <tr>
-        <th>Method Name</th>
+      <tr id="theader">
+        <th>Method</th>
         <th>Structure</th>
         <th>Example</th>
       </tr>
@@ -63,6 +66,34 @@
             <p>Ryan is such a great guy!</p>
             <p>Zach is such a great guy!</p></td>
       </tr>
+      <tr>
+         <td><p>.each_with_index</p></td>
+         <td><p>This handy little method allows </p>
+          you to iterate through an array while</p>
+          also keeping track of which element you’re on.
+         </p></td>
+      <td><p>my_array.each_with_index do</p>
+        <p>|a, index| puts "#{a} is located at index #{index}"</p>
+        <p>end</p>
+      </td>
+      </tr>
+      <tr>
+        <td>
+          <p>.map</p>
+        </td>
+        <td>
+          <p>.map{ |obj| block } => array</p>
+          <p>Returns a new array with the results of running block once for every element in enum.</p>
+        </td>
+        <td>
+          <p>names = ['danil', 'edmund']</p>
+          <p># here we map one array to another, convert each element by some rule</p>
+          <p>names.map! {|name| name.capitalize } # now names contains ['Danil', 'Edmund']</p>
+          <p>names.each { |name| puts name + ' is a programmer' } # here we just do </p>
+          <p>something with each element</p>
+        </td>
+      </tr>
+
     </table>
   </body>
   <div id="main">
