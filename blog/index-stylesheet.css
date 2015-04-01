@@ -137,7 +137,7 @@ a {
 
 #footer img {
   position: relative;
-  bottom: 20px;
+  /*bottom: 20px;*/
 }
 
 #twitter, #github {
