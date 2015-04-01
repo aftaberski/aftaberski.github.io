@@ -99,6 +99,13 @@ a {
   border: solid gray 1px;
 }
 
+#main .wip {
+  border: solid #d3d3d3 1px;
+  padding: 3px;
+  text-align: center;
+  font-size: 25px;
+}
+
 #main h1 {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 40px;
