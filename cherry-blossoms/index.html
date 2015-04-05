@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cherry Blossoms</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/sakura.js"></script>
+    <script src="js/turtle.js"></script>
+  </head>
+  <body>
+
+    <canvas id="tree">
+      <code id="node">
+      </code>
+    </canvas>
+    <script>
+      var tree = new Sakura(document.getElementById('tree'),
+        document.getElementById('node'));
+    </script>
+
+  </body>
+</html>
