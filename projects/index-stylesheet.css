@@ -100,7 +100,7 @@ a {
 }
 
 #main .wip {
-  border: solid #d3d3d3 1px;
+  border: solid #d3d3d3 3px;
   padding: 3px;
   text-align: center;
   font-size: 25px;
