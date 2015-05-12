@@ -8,31 +8,51 @@
     <link href='http://fonts.googleapis.com/css?family=Oleo+Script|Open+Sans+Condensed:700,300' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700' rel='stylesheet' type='text/css'>
   </head>
-  <div id="nav">
-    <ul>
-      <li><a href="http://aftaberski.github.io/">About Me</a></li>
-      <li><a href="http://aftaberski.github.io/projects/">Projects</a></li>
-      <li><a href="http://aftaberski.github.io/blog/">Blog</a></li>
-      <li><a href="http://aftaberski.github.io/">Contact</a></li>
-    </ul>
-  </div>
-  <div id="header">
-    <div id="name">
-    <h1><a href="http://aftaberski.github.io/">Anna Taberski</a></h1>
-  </div>
-  <div id="main">
-    <!--INSERT NEWEST BLOG LINK HERE-->
-    <h1>How Computers Work</h1>
-    <p>MAY 11, 2015</p>
-    <img src="../imgs/silicon-valley-carla.png"/>
-    <p><em><strong>"I'm using VP9 ABR to reduce bits and using WebRTC to carry the bulk of the load via p2p. So basically I pay for one tiny-ass outgoing stream and the user's ISP picks up the whole tab" -Carla Walton</strong></em></p>
-  </div>
-  <div id="footer">
-    <ul>
-      <li id="twitter"><a href="https://twitter.com/AnnaTaberski"><img src="../imgs/twitter-logo.png"/></a></li>
-      <li><a href="https://www.linkedin.com/in/annataberski/"><img src="../imgs/linkedin-logo.png"/></a></li>
-      <li id="github"><a href="https://github.com/aftaberski"><img src="../imgs/facebook-logo.png"/></a></li>
-      <li><a href="mailto:aftaberski@gmail.com"><img src="../imgs/gmail-logo.png"/></a></li>
-    </ul>
-  </div>
+  <body>
+    <div id="nav">
+      <ul>
+        <li><a href="http://aftaberski.github.io/">About Me</a></li>
+        <li><a href="http://aftaberski.github.io/projects/">Projects</a></li>
+        <li><a href="http://aftaberski.github.io/blog/">Blog</a></li>
+        <li><a href="http://aftaberski.github.io/">Contact</a></li>
+      </ul>
+    </div>
+    <div id="header">
+      <div id="name">
+      <h1><a href="http://aftaberski.github.io/">Anna Taberski</a></h1>
+    </div>
+    <div id="main">
+      <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55514a58590624da" async="async"></script>
+      <!--INSERT NEWEST BLOG LINK HERE-->
+      <h1>Silicon Valley Breakdown: The Tiny-Ass Outgoing Stream</h1>
+      <p>MAY 11, 2015</p>
+      <img src="../imgs/silicon-valley-carla.png"/>
+      <p>Silicon Valley has to be one of the best shows on TV right now. It's hilarious and on point and Mike Judge is clearly some sort of savant genius. That said it actually knows some stuff about tech. Like the <a href="https://www.youtube.com/watch?v=P-hUV9yhqgY">"Tip to Tip"</a> algorithm from the end of Season One. (If you need proof that it works, obviously someone wrote a <a href="http://www.scribd.com/doc/228831637/Optimal-Tip-to-Tip-Efficiency">paper</a> on it). The characters really say a bunch of technically interesting stuff. And I think it deserves a super high level breakdown.</p>
+      <p>A couple weeks ago, Pied Piper got it's first female engineer (if you haven't watched it yet, you really should because it's spot on). Anyway, I wanted to break down Carla's quote from her interview:</p>
+      <p class="quote"><em><strong>"I'm using VP9 ABR to reduce bits and using WebRTC to carry the bulk of the load via P2P. So basically I pay for one tiny-ass outgoing stream and the user's ISP picks up the whole tab"</strong></em> -Carla Walton</p>
+      <p>But really...what does this mean? And what does it have to do with a tiny-ass stream? Let's break it down a little.</p>
+      <h1>VP9 ABR</h1>
+      <p>According to Wikipedia,<strong>VP9</strong> is an open and royalty free video coding format being developed by Google. Some of its main goals is to reduce the bit rate (the ratios of bits -- the language computers understand -- that are transferred between devices) by 50% compared to a VP8 (another video compression format owned by Google) AND have a better compression rate than High Efficiency Video Coding (or HEVC, which is a video compression standard).</p>
+      <p>ABR stands for Adaptive Bitrate Streaming - a technique used for streaming multimedia.  VP9 is a type of Adaptive Bitrate Streaming. According to Streaming Media, ABR has 3 main characterists:</p>
+      <ol>
+        <li>They produce multiple files from the same source file to distribute to viewers watching on different devices via different connection speeds. </li>
+        <li>They distribute the files adaptively, changing the stream thats delivered to adapt to changes in effective throughput and available CPU cycles on the playback station.</li>
+        <li>They operate transparently to the user, so that the viewer clicks one button and all stream switching occurs behind the scenes. The viewer may notice a slight change in quality as the streams switch, but no action is required on his part.</li>
+      <h1>WebRTC</h1>
+      <p>AKA Web Real-Time Communication. WebRTC leverages a set of plugin-free APIs that can be used in both desktop and mobile browsers. The main benefit of WebRTC is real-time communication (think video chat). One of the most difficult aspects of real time chats is how to locate and establish a network socket connection with another computer's web browser (in order to transmit the data between both parties)</p>
+      <p>Instead, WebRTC establishes "channels" which are kind of private hangouts. Only those who know about the channels are able to send and receive messages because they require a unique identifier in order to access them.</p>
+      <h1>P2P</h1>
+      <p>Aka peer-to-peer. It is a decentralized communications model where each party has the same capabilities and either party can initiate a communication session. Unlike the client/server model, in which the client makes a service request and the server fulfills the request, the P2P network model allows each party to act as both a client and server.</p>
+      <p class="quote">BOOM! This is the key to what Carla is saying. Since the user's ISP (Internet Service Provider) acts as the client and the server, the Comcasts and Verizon's of the world will be footing the bill which ultimately is being paid for by the users.</p>
+      <p>NOTE: this blog post does not cover everything by any means! This is just what I found in my research. I highly encourage everyone to do some googling to fill in the rest of the cracks. There are a ton of rad resources out there!</p>
+    </div>
+    <div id="footer">
+      <ul>
+        <li id="twitter"><a href="https://twitter.com/AnnaTaberski"><img src="../imgs/twitter-logo.png"/></a></li>
+        <li><a href="https://www.linkedin.com/in/annataberski/"><img src="../imgs/linkedin-logo.png"/></a></li>
+        <li id="github"><a href="https://github.com/aftaberski"><img src="../imgs/facebook-logo.png"/></a></li>
+        <li><a href="mailto:aftaberski@gmail.com"><img src="../imgs/gmail-logo.png"/></a></li>
+      </ul>
+    </div>
+  </body>
 </html>
