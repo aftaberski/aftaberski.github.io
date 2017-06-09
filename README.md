@@ -1,2 +1,0 @@
-aftaberski.github.io
-====================
