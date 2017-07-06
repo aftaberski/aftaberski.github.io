@@ -4,12 +4,6 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
+Hi, I'm Anna. I'm a software engineer. I like solving problems with code. I usually learn some things along the way. Check out my [blog]("/") to see what I've been working on.
 
-You can find the source code for the Jekyll new theme at:
-{% include icon-github.html username="jekyll" %} /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at
-{% include icon-github.html username="jekyll" %} /
-[jekyll](https://github.com/jekyll/jekyll)
+I've been lucky enough to have spent this past year working as a backend engineer using Clojure where I got to discover lots of neat functional programming concepts like pure functions, immutable data structures, and the glory of rainbow parens. I'm now heading to the Recurse Center where I'm hoping to dive deeper into CS fundamentals, networking, and more Clojure!
