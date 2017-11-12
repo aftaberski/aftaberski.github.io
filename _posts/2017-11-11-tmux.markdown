@@ -1,0 +1,37 @@
+---
+layout: post
+title:  "Tmux"
+date:   2017-11-11 11:35:09 -0400
+---
+
+I just started a new job this past week and I've already been learning lots of new things. I'm going to make an attempt to document at least some of them here on my blog!
+
+One of the first new tools I started using is **Tmux**, a screen multiplexor.
+
+It allows you to split your screen so you can run multiple programs within your terminal. This allows you to simultaneously view the different outputs from your programs. I've found this to be really useful.
+
+To install (assuming you have Homebrew installed):
+```
+brew install tmux
+```
+
+To split your screen vertically:
+```
+Ctrl-b %
+```
+
+To split your screen horizontally:
+```
+Ctrl-b "
+```
+
+The prefix `Ctrl-b` is kinda awkward, so a lot of people seem to change it to `Ctrl-a` instead.
+
+You can do this by adding the following to your `~/.tmux.conf`:
+```
+set -g prefix C-a
+unbind-key C-b
+bind-key C-a send-prefix
+```
+
+You may need to create the file. If you've already started tmux before update your conf file, you can just run `tmux source ~/.tmux.conf`
