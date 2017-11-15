@@ -1,0 +1,21 @@
+---
+layout: post
+title:  "Tmux: Part 2"
+date:   2017-11-14 11:35:09 -0400
+---
+
+I wanted to jot down a couple more tmux commands I've been finding really helpful.
+
+Create a named session! This is super helpful if you want to easily come back to your carefully organized windows and running processes without having to remember a seemingly arbitrary session number
+
+```
+tmux new -s session-name
+```
+
+Now you have a session called `session-name`. If you want to come back to it after exiting your terminal or terminating your ssh connection, you can reattach to that session name
+
+```
+tmux a -t session-name
+```
+
+Now it's like you never left your tmux session :)
