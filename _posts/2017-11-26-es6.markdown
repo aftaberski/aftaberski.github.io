@@ -1,0 +1,93 @@
+---
+layout: post
+title:  "Fun things about ES6"
+date:   2017-11-26 11:35:09 -0400
+---
+
+The last time I wrote Javascript, I was mainly writing jQuery plugins. Now I'm jumping back into writing JS at my new job which makes use of a lot of the new ES6 features. Here are a few things I've learned about ECMAScript 2015.
+
+## Arrow Functions
+
+In the past, to refer to an outer scope, you used to have to use `that` or some other semi-hack.
+
+```javascript
+var person = {
+  name: "Anna",
+  handleMessage: function(message, handler) {handler(message)},
+  receive: function() {
+    var that = this;
+    this.handleMessage("Hi", function(message) {
+      console.log(message + that.name);
+    })
+  }
+}
+```
+
+Now you can just use `this`! So the `receive` function would look like this instead:
+
+```javascript
+receive: function() {
+  this.handleMessage("Hi", (message) => {console.log(message + this.name)})
+}
+```
+
+## The <code style="font-size:32px">let</code> keyword
+
+To avoid a block overwriting some variable you have declared in an outer scope, you can use `let`
+
+```javascript
+let i = 10;
+
+for (let i = 0; i < 5; i++) {
+  console.log(i);
+}
+
+console.log(i);
+```
+
+The above will print 0 through 4, but the final statement printed will be 10, since the initial definition is preserved.
+
+
+## Object shortcuts
+
+```javascript
+var name = "Anna";
+var hairColor = "blonde";
+
+anna = {name, hairColor};
+// {name: "Anna", hairColor: "blonde"}
+```
+
+## Spread Operator
+
+```javascript
+console.log(...[1, 2, 3]);
+// 1 2 3
+```
+Now you can do things like this:
+
+```javascript
+var produce = ["apple", "pear"]
+var moreProduce = ["carrots", "kale"]
+
+console.log("All the produce", first.push(...moreProduce))
+// All the produce ["apple", "pear", "carrots", "kale"]
+```
+
+## Template Literals
+
+```javascript
+var greeting = `hi`
+
+console.log(`${greeting} world`);
+// hi world
+```
+
+## Destructuring
+
+```javascript
+var {name} = {name: "Meatball", color: "black"}
+
+console.log(name);
+// Meatball
+```
